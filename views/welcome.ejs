@@ -9,13 +9,48 @@
 <body>
     <div class="container">
         <header>
-            <h1>Bienvenue sur GroupGift!</h1>
-            <p>Un site permettant de simplifier les cadeaux de groupe!</p>
+            <h1>Welcome to Group Presents</h1>
+            <p>Making group presents easier for everyone!</p>
         </header>
         <main>
-            <p>Créer un groupe, ajouter des membres, et simplifier l'organisation des cadeaux de groupe!</p>
-            <a onclick="createGroup()" class="get-started-button">Get Started</a>
+            <p>Create a group, add members, and simplify the gift-giving process.</p>
+            <button id="createGroupBtn" class="get-started-button" onclick="openModal()">Get Started</button>
         </main>
+
+        <!-- Modal -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2 class="popup-title">Create a Group</h2>
+                <form method="POST" action="./welcome.ejs">
+                    <label for="group-name">Group's Name</label>
+                    <input id="group-name" type="text" placeholder="Christmas Present">    
+
+                    <label for="group-npassword">Group's Password</label>
+                    <input id="group-npassword" type="password">  
+
+                                                                                                                                                                                                                                                                    
+                
+                
+                </form>
+                <!-- Your form content goes here -->
+            </div>
+        </div>
     </div>
+
+    <script >
+        // script.js
+
+        function openModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "block";
+        }
+
+        function closeModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+
+    </script>
 </body>
 </html>
